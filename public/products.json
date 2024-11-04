@@ -1,0 +1,121 @@
+[
+  {
+    "product_title": "Lenovo ThinkPad X1 Carbon",
+    "product_image": "https://mcsolution.com.bd/wp-content/uploads/2024/01/Lenovo-ThinkPad-X1-Carbon-Gen11-O1WW-11P-price-in-Bangladesh-MC-Solution-BD-1200x900.webp",
+    "category": "Laptops",
+    "price": 1299,
+    "description": "A high-performance laptop with Intel Core i7, 16GB RAM, and a 512GB SSD, designed for business professionals.",
+    "specification": {
+      "Processor": "Intel Core i7",
+      "RAM": "16GB",
+      "Storage": "512GB SSD",
+      "Display": "14\" Full HD"
+    },
+    "availability": true,
+    "rating": 4.8
+  },
+  {
+    "product_title": "Dell XPS 13",
+    "product_image": "https://computermania-bd.b-cdn.net/wp-content/uploads/Dell-XPS-13-Plus-BD-Price-1.jpg",
+    "category": "Laptops",
+    "price": 1199,
+    "description": "Sleek, ultra-portable laptop with an Intel Core i5, 8GB RAM, and a 256GB SSD, perfect for on-the-go use.",
+    "specification": {
+      "Processor": "Intel Core i5",
+      "RAM": "8GB",
+      "Storage": "256GB SSD",
+      "Display": "13.3\" Full HD"
+    },
+    "availability": true,
+    "rating": 4.7
+  },
+  {
+    "product_title": "Samsung Galaxy S23",
+    "product_image": "https://adminapi.applegadgetsbd.com/storage/media/large/Galaxy-S23-Ultra-Phantom-Black-2756.jpg",
+    "category": "Phones",
+    "price": 999,
+    "description": "High-performance Android phone with a stunning display, great camera, and long-lasting battery life.",
+    "specification": {
+      "Processor": "Snapdragon 8 Gen 2",
+      "RAM": "8GB",
+      "Storage": "128GB",
+      "Camera": "50MP"
+    },
+    "availability": true,
+    "rating": 4.6
+  },
+  {
+    "product_title": "Google Pixel 8",
+    "product_image": "https://mobilebuzzbd.com/wp-content/uploads/2023/12/Pixel-8-Pro.jpg",
+    "category": "Phones",
+    "price": 899,
+    "description": "Pure Android experience with an exceptional camera and AI-driven features.",
+    "specification": {
+      "Processor": "Google Tensor G3",
+      "RAM": "8GB",
+      "Storage": "128GB",
+      "Camera": "50MP"
+    },
+    "availability": true,
+    "rating": 4.5
+  },
+  {
+    "product_title": "Apple Watch Series 9",
+    "product_image": "https://adminapi.applegadgetsbd.com/storage/media/large/Apple-Watch-Series-9-(3)-6716.jpg",
+    "category": "Smart Watches",
+    "price": 399,
+    "description": "Advanced health monitoring features and a new S9 chip for faster performance.",
+    "specification": {
+      "Display": "1.78\" Retina",
+      "Battery Life": "Up to 18 hours",
+      "Water Resistance": "50m",
+      "Sensors": ["Heart rate", "ECG", "SpO2"]
+    },
+    "availability": true,
+    "rating": 4.9
+  },
+  {
+    "product_title": "Samsung Galaxy Watch6",
+    "product_image": "https://adminapi.applegadgetsbd.com/storage/media/large/Galaxy-Watch6-Gold-5232.jpg",
+    "category": "Smart Watches",
+    "price": 349,
+    "description": "Feature-rich smartwatch with fitness tracking and an advanced health suite.",
+    "specification": {
+      "Display": "1.4\" AMOLED",
+      "Battery Life": "Up to 40 hours",
+      "Water Resistance": "IP68",
+      "Sensors": ["Heart rate", "ECG", "Blood Oxygen"]
+    },
+    "availability": true,
+    "rating": 4.7
+  },
+  {
+    "product_title": "Bose QuietComfort Earbuds II",
+    "product_image": "https://www.gadgetstyler.com/wp-content/uploads/2023/03/61OjFJ2p1nL._AC_SL1500_-1708x1708.jpg",
+    "category": "Accessories",
+    "price": 249,
+    "description": "Premium noise-canceling wireless earbuds with up to 6 hours of battery life and superior sound quality.",
+    "specification": {
+      "Battery Life": "Up to 6 hours",
+      "Noise Cancellation": true,
+      "Connectivity": "Bluetooth 5.3",
+      "Water Resistance": "IPX4"
+    },
+    "availability": true,
+    "rating": 4.8
+  },
+  {
+    "product_title": "Anker PowerCore Portable Charger",
+    "product_image": "https://i5.walmartimages.com/seo/Anker-PowerCore-Select-10000-Portable-Charger-Black-Ultra-Compact-High-Speed-Charging-Technology-Phone-Charger-for-iPhone-Samsung-and-More_621e9d8d-b4b2-4e15-b4cd-b439561ec4d0.c822834630c31c13416f2aacb33ddd5e.jpeg",
+    "category": "Accessories",
+    "price": 49,
+    "description": "Compact portable charger with 10,000mAh capacity, fast charging capability for phones and tablets.",
+    "specification": {
+      "Capacity": "10,000mAh",
+      "Output": "18W fast charge",
+      "Ports": ["2 USB-A", "1 USB-C"]
+    },
+    "availability": true,
+    "rating": 4.6
+  }
+]
