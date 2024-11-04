@@ -16,7 +16,7 @@ const Accessories = () => {
         {allProducts
           .filter(item => item.category === "Accessories")
           .map(product => (
-            <ProductCard key={product.product_title} product={product} />
+            <ProductCard key={product.id} product={product} />
           ))}
       </div>
     </div>

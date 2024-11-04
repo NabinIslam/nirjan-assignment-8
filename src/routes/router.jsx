@@ -6,6 +6,8 @@ import HomeLayout from "../layouts/HomeLayout";
 import Phones from "../pages/Phones";
 import Accessories from "../pages/Accessories";
 import SmartWatches from "../pages/SmartWatches";
+import ProductDetails from "../pages/ProductDetails";
+import Dashboard from "../pages/Dashboard";
 
 const router = createBrowserRouter([
   {
@@ -22,6 +24,15 @@ const router = createBrowserRouter([
           { path: "/accessories", element: <Accessories /> },
           { path: "/smart-watches", element: <SmartWatches /> },
         ],
+      },
+      {
+        path: "/product-details/:productId",
+        element: <ProductDetails />,
+        loader: () => fetch("/products.json"),
+      },
+      {
+        path: "/dashboard",
+        element: <Dashboard />,
       },
     ],
   },
