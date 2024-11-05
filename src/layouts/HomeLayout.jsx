@@ -54,18 +54,6 @@ const HomeLayout = () => {
                 Phones
               </NavLink>
               <NavLink
-                to="/accessories"
-                className={({ isActive }) =>
-                  `block py-4 px-8 ${
-                    isActive
-                      ? "text-white bg-[#9538E2]"
-                      : "text-[#66666A] bg-[#F2F2F3]"
-                  }  rounded-full`
-                }
-              >
-                Accessories
-              </NavLink>
-              <NavLink
                 to="/smart-watches"
                 className={({ isActive }) =>
                   `block py-4 px-8 ${

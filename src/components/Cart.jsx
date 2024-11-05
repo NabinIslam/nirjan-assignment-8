@@ -1,15 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import { RxCross2 } from "react-icons/rx";
 import { useCart } from "../context/CartContext";
 import { toast } from "react-toastify";
 
 const Cart = () => {
   const { cart, removeFromCart, clearCart } = useCart();
+  const [sortedCart, setSortedCart] = useState(cart);
 
   const totalPrice = cart.reduce(
     (sum, item) => sum + item.price * (item.quantity || 1),
     0
   );
+
+  const sortByPrice = () => {
+    const sorted = [...sortedCart].sort((a, b) => b.price - a.price);
+    setSortedCart(sorted);
+  };
 
   return (
     <div className="py-20 space-y-10">
@@ -17,7 +23,10 @@ const Cart = () => {
         <h3 className="font-semibold">Cart</h3>
         <div className="flex items-center justify-end gap-x-5">
           <h3 className="font-semibold">Total cost: {totalPrice}$</h3>
-          <button className="border border-[#9538E2] flex items-center justify-center gap-x-2 text-[#9538E2] px-5 py-2 rounded-full">
+          <button
+            className="border border-[#9538E2] flex items-center justify-center gap-x-2 text-[#9538E2] px-5 py-2 rounded-full"
+            onClick={sortByPrice}
+          >
             Sort by Price{" "}
             <svg
               width="24"
@@ -100,7 +109,10 @@ const Cart = () => {
           </button>
           <button
             className="border border-[#9538E2] flex items-center justify-center gap-x-2 text-white bg-[#9538E2] px-5 py-2 rounded-full"
-            onClick={clearCart}
+            onClick={() => {
+              document.getElementById("my_modal_1").showModal();
+              clearCart();
+            }}
           >
             Purchase
           </button>
@@ -108,7 +120,7 @@ const Cart = () => {
       </div>
 
       <div className="space-y-5">
-        {cart.map(item => (
+        {sortedCart.map((item) => (
           <div className="flex items-center gap-x-5 bg-white rounded-2xl p-5 border shadow-sm">
             <div>
               <img
@@ -133,6 +145,16 @@ const Cart = () => {
           </div>
         ))}
       </div>
+
+      <dialog id="my_modal_1" className="modal">
+        <div className="modal-box">
+          <img src="/success.svg" alt="success" />
+          <h2 className="text-xl font-semibold text-center">
+            Payment successful
+          </h2>
+          <p className="text-sm text-center">Thank you for your purchase.</p>
+        </div>
+      </dialog>
     </div>
   );
 };

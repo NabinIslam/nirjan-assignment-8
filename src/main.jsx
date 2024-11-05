@@ -11,7 +11,7 @@ createRoot(document.getElementById("root")).render(
   <StrictMode>
     <CartProvider>
       <WishlistProvider>
-        <ToastContainer />
+        <ToastContainer position="top-center" />
         <App />
       </WishlistProvider>
     </CartProvider>

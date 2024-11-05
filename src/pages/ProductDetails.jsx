@@ -11,9 +11,11 @@ const ProductDetails = () => {
   const { productId } = useParams();
   const data = useLoaderData();
   const { addToCart } = useCart();
-  const { addToWishlist } = useWishlist();
+  const { wishlist, addToWishlist } = useWishlist();
 
-  const bookDetails = data.find(book => book.id === productId);
+  const bookDetails = data.find((book) => book.id === productId);
+
+  const isInWishlist = wishlist.find((item) => item.id === bookDetails.id);
 
   const {
     product_image,
@@ -93,6 +95,7 @@ const ProductDetails = () => {
                     addToWishlist(bookDetails);
                     toast("Product added to wishlist successfully");
                   }}
+                  disabled={isInWishlist}
                 >
                   <IoMdHeartEmpty />
                 </button>

@@ -2,18 +2,23 @@ import React from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { IoCartOutline } from "react-icons/io5";
 import { IoMdHeartEmpty } from "react-icons/io";
+import { useCart } from "../context/CartContext";
+import { useWishlist } from "../context/WishlistContext";
 
 const Header = () => {
   const { pathname } = useLocation();
+  const { cart } = useCart();
+  const { wishlist } = useWishlist();
 
-  const isProductDetailsPage = /^\/product-details\/\d+$/.test(pathname);
+  const shouldUsePurpleBg =
+    pathname === "/dashboard" ||
+    pathname === "/statistics" ||
+    /^\/product-details\/\d+$/.test(pathname);
 
   return (
     <header
       className={`${
-        pathname === "/statistics" || "/dashboard" || isProductDetailsPage
-          ? "bg-white text-black"
-          : "bg-[#9538E2] text-white"
+        shouldUsePurpleBg ? "bg-white text-black" : "bg-[#9538E2] text-white"
       } py-5`}
     >
       <nav className="container flex items-center justify-between">
@@ -51,11 +56,21 @@ const Header = () => {
         </ul>
 
         <div className="flex items-center justify-end gap-x-2 basis-[25%]">
-          <button className="bg-white text-black text-xl p-2 rounded-full">
+          <button className="relative bg-white text-black text-xl p-2 rounded-full">
             <IoCartOutline />
+            {cart.length >= 1 && (
+              <span className="absolute top-0 right-0 bg-red-700 text-white text-xs px-[5px] rounded-full">
+                {cart.length}
+              </span>
+            )}
           </button>
-          <button className="bg-white text-black text-xl p-2 rounded-full">
+          <button className="relative bg-white text-black text-xl p-2 rounded-full">
             <IoMdHeartEmpty />
+            {wishlist.length >= 1 && (
+              <span className="absolute top-0 right-0 bg-red-700 text-white text-xs px-[5px] rounded-full">
+                {wishlist.length}
+              </span>
+            )}
           </button>
         </div>
       </nav>

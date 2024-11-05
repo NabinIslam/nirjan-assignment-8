@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -12,9 +13,11 @@ const Hero = () => {
           level. From smart devices to <br /> the coolest accessories, we have
           it all!
         </p>
-        <button className="bg-white text-md px-5 py-2 rounded-full text-[#9538E2] font-bold">
-          Shop Now
-        </button>
+        <Link to="/dashboard">
+          <button className="bg-white text-md px-5 py-2 rounded-full text-[#9538E2] font-bold">
+            Shop Now
+          </button>
+        </Link>
       </div>
     </section>
   );
