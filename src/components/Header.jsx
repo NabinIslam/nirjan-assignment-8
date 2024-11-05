@@ -1,11 +1,21 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { IoCartOutline } from "react-icons/io5";
 import { IoMdHeartEmpty } from "react-icons/io";
 
 const Header = () => {
+  const { pathname } = useLocation();
+
+  const isProductDetailsPage = /^\/product-details\/\d+$/.test(pathname);
+
   return (
-    <header className="bg-[#9538E2] text-white py-5 ">
+    <header
+      className={`${
+        pathname === "/statistics" || "/dashboard" || isProductDetailsPage
+          ? "bg-white text-black"
+          : "bg-[#9538E2] text-white"
+      } py-5`}
+    >
       <nav className="container flex items-center justify-between">
         <div className="basis-[25%] flex items-center justify-start">
           <Link className="" to="/">
@@ -15,13 +25,28 @@ const Header = () => {
 
         <ul className="flex items-center justify-center text-sm gap-x-5 basis-[50%]">
           <li>
-            <Link to="/">Home</Link>
+            <NavLink
+              className={({ isActive }) => isActive && "underline"}
+              to="/"
+            >
+              Home
+            </NavLink>
           </li>
           <li>
-            <Link to="/statistics">Statistics</Link>
+            <NavLink
+              className={({ isActive }) => isActive && "underline"}
+              to="/statistics"
+            >
+              Statistics
+            </NavLink>
           </li>
           <li>
-            <Link to="/dashboard">Dashboard</Link>
+            <NavLink
+              className={({ isActive }) => isActive && "underline"}
+              to="/dashboard"
+            >
+              Dashboard
+            </NavLink>
           </li>
         </ul>
 

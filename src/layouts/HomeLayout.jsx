@@ -1,7 +1,7 @@
 import React from "react";
 import Hero from "../components/Hero";
 import Banner from "../components/Banner";
-import { Link, Outlet } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 
 const HomeLayout = () => {
   return (
@@ -17,36 +17,66 @@ const HomeLayout = () => {
         <div className="container flex items-start gap-5">
           <div className="basis-auto w-[300px]">
             <div className="bg-white p-5 rounded-xl space-y-5 border shadow-sm">
-              <Link
+              <NavLink
                 to="/"
-                className="block py-4 px-8 text-white bg-[#9538E2] rounded-full"
+                className={({ isActive }) =>
+                  `block py-4 px-8 rounded-full ${
+                    isActive
+                      ? "text-white bg-[#9538E2]"
+                      : "text-[#66666A] bg-[#F2F2F3]"
+                  }`
+                }
               >
                 All Products
-              </Link>
-              <Link
+              </NavLink>
+              <NavLink
                 to="/laptops"
-                className="block py-4 px-8 text-white bg-[#9538E2] rounded-full"
+                className={({ isActive }) =>
+                  `block py-4 px-8 rounded-full ${
+                    isActive
+                      ? "text-white bg-[#9538E2]"
+                      : "text-[#66666A] bg-[#F2F2F3]"
+                  }`
+                }
               >
                 Laptops
-              </Link>
-              <Link
+              </NavLink>
+              <NavLink
                 to="/phones"
-                className="block py-4 px-8 text-white bg-[#9538E2] rounded-full"
+                className={({ isActive }) =>
+                  `block py-4 px-8 ${
+                    isActive
+                      ? "text-white bg-[#9538E2]"
+                      : "text-[#66666A] bg-[#F2F2F3]"
+                  }  rounded-full`
+                }
               >
                 Phones
-              </Link>
-              <Link
+              </NavLink>
+              <NavLink
                 to="/accessories"
-                className="block py-4 px-8 text-white bg-[#9538E2] rounded-full"
+                className={({ isActive }) =>
+                  `block py-4 px-8 ${
+                    isActive
+                      ? "text-white bg-[#9538E2]"
+                      : "text-[#66666A] bg-[#F2F2F3]"
+                  }  rounded-full`
+                }
               >
                 Accessories
-              </Link>
-              <Link
+              </NavLink>
+              <NavLink
                 to="/smart-watches"
-                className="block py-4 px-8 text-white bg-[#9538E2] rounded-full"
+                className={({ isActive }) =>
+                  `block py-4 px-8 ${
+                    isActive
+                      ? "text-white bg-[#9538E2]"
+                      : "text-[#66666A] bg-[#F2F2F3]"
+                  }  rounded-full`
+                }
               >
                 Smart Watches
-              </Link>
+              </NavLink>
             </div>
           </div>
           <div className="basis-full">

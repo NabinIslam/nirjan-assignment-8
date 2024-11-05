@@ -8,6 +8,7 @@ import Accessories from "../pages/Accessories";
 import SmartWatches from "../pages/SmartWatches";
 import ProductDetails from "../pages/ProductDetails";
 import Dashboard from "../pages/Dashboard";
+import Statistics from "../pages/Statistics";
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
       {
         path: "/dashboard",
         element: <Dashboard />,
+      },
+      {
+        path: "/statistics",
+        element: <Statistics />,
       },
     ],
   },

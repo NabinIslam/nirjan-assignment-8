@@ -1,14 +1,17 @@
 import React from "react";
 import { useLoaderData, useParams } from "react-router-dom";
-import ReactStars from "react-rating-stars-component";
 import { Rating } from "react-simple-star-rating";
 import { IoCartOutline } from "react-icons/io5";
 import { IoMdHeartEmpty } from "react-icons/io";
+import { useCart } from "../context/CartContext";
+import { useWishlist } from "../context/WishlistContext";
+import { toast } from "react-toastify";
 
 const ProductDetails = () => {
   const { productId } = useParams();
-
   const data = useLoaderData();
+  const { addToCart } = useCart();
+  const { addToWishlist } = useWishlist();
 
   const bookDetails = data.find(book => book.id === productId);
 
@@ -75,10 +78,22 @@ const ProductDetails = () => {
               </div>
 
               <div className="flex items-center justify-start gap-3">
-                <button className="bg-[#9538E2] text-white text-sm px-5 py-2 rounded-full flex items-center gap-2">
+                <button
+                  className="bg-[#9538E2] text-white text-sm px-5 py-2 rounded-full flex items-center gap-2"
+                  onClick={() => {
+                    addToCart(bookDetails);
+                    toast("Product added to cart successfully");
+                  }}
+                >
                   Add To Card <IoCartOutline className="text-xl" />
                 </button>
-                <button className="bg-white border text-black text-xl p-2 rounded-full">
+                <button
+                  className="bg-white border text-black text-xl p-2 rounded-full"
+                  onClick={() => {
+                    addToWishlist(bookDetails);
+                    toast("Product added to wishlist successfully");
+                  }}
+                >
                   <IoMdHeartEmpty />
                 </button>
               </div>
