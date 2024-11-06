@@ -45,14 +45,7 @@ const Header = () => {
               About Us
             </NavLink>
           </li>
-          <li>
-            <NavLink
-              className={({ isActive }) => isActive && "underline"}
-              to="/statistics"
-            >
-              Statistics
-            </NavLink>
-          </li>
+
           <li>
             <NavLink
               className={({ isActive }) => isActive && "underline"}
