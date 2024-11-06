@@ -2,10 +2,14 @@ import React from "react";
 import Hero from "../components/Hero";
 import Banner from "../components/Banner";
 import { NavLink, Outlet } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const HomeLayout = () => {
   return (
     <main>
+      <Helmet>
+        <title>Gadget Heaven | Home</title>
+      </Helmet>
       <Hero />
       <Banner />
       <section className="py-[50px]">

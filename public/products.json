@@ -34,7 +34,7 @@
   {
     "id": "3",
     "product_title": "HP Spectre x360",
-    "product_image": "https://example.com/images/hp-spectre-x360.jpg",
+    "product_image": "https://img.drz.lazcdn.com/static/bd/p/89b069fd679a2ff07aa5d7eb308569e8.png_960x960q80.png_.webp",
     "category": "Laptops",
     "price": 1499,
     "description": "A versatile 2-in-1 laptop with Intel Core i7, 16GB RAM, and a 1TB SSD, perfect for productivity and creativity on the go.",
@@ -50,7 +50,7 @@
   {
     "id": "4",
     "product_title": "Apple MacBook Pro 14-inch",
-    "product_image": "https://example.com/images/macbook-pro-14.jpg",
+    "product_image": "https://computermania-bd.b-cdn.net/wp-content/uploads/Macbook-Pro-M1-Chip-3.png",
     "category": "Laptops",
     "price": 1999,
     "description": "A premium laptop with Apple M2 Pro chip, 16GB unified memory, and 512GB SSD, designed for high-end performance and creative work.",
@@ -67,7 +67,7 @@
   {
     "id": "5",
     "product_title": "Asus ZenBook 14",
-    "product_image": "https://example.com/images/asus-zenbook-14.jpg",
+    "product_image": "https://computermania-bd.b-cdn.net/wp-content/uploads/ASUS-Zenbook-14-OLED-Q415MA-Ultrabook-Laptop-4.jpg",
     "category": "Laptops",
     "price": 1199,
     "description": "A lightweight and stylish laptop with AMD Ryzen 7, 16GB RAM, and a 512GB SSD, designed for efficient multitasking and portability.",
@@ -84,7 +84,7 @@
   {
     "id": "6",
     "product_title": "Microsoft Surface Laptop 5",
-    "product_image": "https://example.com/images/surface-laptop-5.jpg",
+    "product_image": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Highlight-Surface-Laptop-5-for-Business-C:VP1-539x440",
     "category": "Laptops",
     "price": 1299,
     "description": "A sleek and powerful laptop with Intel Core i5, 8GB RAM, and a 256GB SSD, designed for seamless productivity with a touchscreen display.",

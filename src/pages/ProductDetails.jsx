@@ -6,6 +6,7 @@ import { IoMdHeartEmpty } from "react-icons/io";
 import { useCart } from "../context/CartContext";
 import { useWishlist } from "../context/WishlistContext";
 import { toast } from "react-toastify";
+import { Helmet } from "react-helmet-async";
 
 const ProductDetails = () => {
   const { productId } = useParams();
@@ -13,9 +14,9 @@ const ProductDetails = () => {
   const { addToCart } = useCart();
   const { wishlist, addToWishlist } = useWishlist();
 
-  const bookDetails = data.find((book) => book.id === productId);
+  const bookDetails = data.find(book => book.id === productId);
 
-  const isInWishlist = wishlist.find((item) => item.id === bookDetails.id);
+  const isInWishlist = wishlist.find(item => item.id === bookDetails.id);
 
   const {
     product_image,
@@ -29,6 +30,9 @@ const ProductDetails = () => {
 
   return (
     <main>
+      <Helmet>
+        <title>Gadget Heaven | {product_title}</title>
+      </Helmet>
       <section className="bg-[#9538E2] pt-10 pb-52">
         <div className="container space-y-3">
           <h2 className="text-3xl text-white font-bold text-center">

@@ -1,9 +1,13 @@
 import React from "react";
 import Chart from "../components/Chart";
+import { Helmet } from "react-helmet-async";
 
 const Statistics = () => {
   return (
     <main>
+      <Helmet>
+        <title>Gadget Heaven | Statistics</title>
+      </Helmet>
       <div className="bg-[#9538E2]">
         <div className="container space-y-5 py-[60px]">
           <h2 className="text-center font-bold text-3xl text-white">

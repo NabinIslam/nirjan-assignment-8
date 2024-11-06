@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import { RxCross2 } from "react-icons/rx";
 import { useCart } from "../context/CartContext";
 import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
   const { cart, removeFromCart, clearCart } = useCart();
   const [sortedCart, setSortedCart] = useState(cart);
+  const navigate = useNavigate();
 
   const totalPrice = cart.reduce(
     (sum, item) => sum + item.price * (item.quantity || 1),
@@ -113,6 +115,7 @@ const Cart = () => {
               document.getElementById("my_modal_1").showModal();
               clearCart();
             }}
+            disabled={cart.length === 0}
           >
             Purchase
           </button>
@@ -120,7 +123,7 @@ const Cart = () => {
       </div>
 
       <div className="space-y-5">
-        {sortedCart.map((item) => (
+        {sortedCart.map(item => (
           <div className="flex items-center gap-x-5 bg-white rounded-2xl p-5 border shadow-sm">
             <div>
               <img
@@ -147,12 +150,27 @@ const Cart = () => {
       </div>
 
       <dialog id="my_modal_1" className="modal">
-        <div className="modal-box">
-          <img src="/success.svg" alt="success" />
+        <div className="modal-box space-y-3">
+          <div>
+            <img className="mx-auto" src="/success.svg" alt="success" />
+          </div>
           <h2 className="text-xl font-semibold text-center">
             Payment successful
           </h2>
           <p className="text-sm text-center">Thank you for your purchase.</p>
+          <div className="modal-action">
+            <form method="dialog">
+              <button
+                className="btn"
+                onClick={() => {
+                  clearCart();
+                  navigate("/");
+                }}
+              >
+                Close
+              </button>
+            </form>
+          </div>
         </div>
       </dialog>
     </div>
