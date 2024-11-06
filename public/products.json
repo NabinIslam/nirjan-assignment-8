@@ -13,7 +13,7 @@
       "Display: 14\" Full HD"
     ],
     "availability": true,
-    "rating": 4.8
+    "rating": 4.4
   },
   {
     "id": "2",
@@ -29,7 +29,7 @@
       "Display: 13.3\" Full HD"
     ],
     "availability": true,
-    "rating": 4.7
+    "rating": 5
   },
   {
     "id": "3",
@@ -45,7 +45,7 @@
       "Display: 13.3\" 4K UHD Touchscreen"
     ],
     "availability": true,
-    "rating": 4.6
+    "rating": 2.6
   },
   {
     "id": "4",
@@ -61,7 +61,7 @@
       "Display: 14\" Liquid Retina XDR"
     ],
     "availability": true,
-    "rating": 4.9
+    "rating": 3.8
   },
 
   {
@@ -95,7 +95,7 @@
       "Display: 13.5\" PixelSense Touchscreen"
     ],
     "availability": true,
-    "rating": 4.4
+    "rating": 3.8
   },
 
   {
@@ -112,7 +112,7 @@
       "Camera: 50MP"
     ],
     "availability": true,
-    "rating": 4.6
+    "rating": 4.4
   },
   {
     "id": "8",
@@ -128,7 +128,7 @@
       "Camera: 50MP"
     ],
     "availability": true,
-    "rating": 4.5
+    "rating": 5.3
   },
   {
     "id": "9",
@@ -144,7 +144,7 @@
       "Sensors: Heart rate, ECG, SpO2"
     ],
     "availability": true,
-    "rating": 4.9
+    "rating": 2.2
   },
   {
     "id": "10",
@@ -160,6 +160,6 @@
       "Sensors: Heart rate, ECG, Blood Oxygen"
     ],
     "availability": true,
-    "rating": 4.7
+    "rating": 4.2
   }
 ]

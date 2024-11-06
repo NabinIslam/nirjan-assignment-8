@@ -9,6 +9,7 @@ import ProductDetails from "../pages/ProductDetails";
 import Dashboard from "../pages/Dashboard";
 import Statistics from "../pages/Statistics";
 import ErrorPage from "../pages/ErrorPage";
+import AboutUs from "../pages/AboutUs";
 
 const router = createBrowserRouter([
   {
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
       {
         path: "/statistics",
         element: <Statistics />,
+      },
+      {
+        path: "/about-us",
+        element: <AboutUs />,
       },
     ],
   },

@@ -1,8 +1,26 @@
-# React + Vite
+## Live Website Link
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+http://gadget-heaven.vercel.app/
 
-Currently, two official plugins are available:
+## Requirement Document Link
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+https://drive.google.com/file/d/11f2HUXeGfld5UT72n_eM3MBkRVnWzcrz/view?usp=sharing
+
+## React Fundamental concepts used in the project
+
+- Context API
+- React Router Nested Layout
+- State Manangement
+
+## Concept or Technology used for handling and managing data
+
+- Context API
+- useState hook
+- State Manangement
+
+## Features
+
+- User can find and filter products by category
+- User can add product to cart and wishlist
+- User can remove and clear cart items
+- User can remove items from wishlist

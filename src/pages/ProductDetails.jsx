@@ -1,6 +1,6 @@
 import React from "react";
 import { useLoaderData, useParams } from "react-router-dom";
-import { Rating } from "react-simple-star-rating";
+import ReactStars from "react-rating-stars-component";
 import { IoCartOutline } from "react-icons/io5";
 import { IoMdHeartEmpty } from "react-icons/io";
 import { useCart } from "../context/CartContext";
@@ -74,13 +74,14 @@ const ProductDetails = () => {
               </ol>
 
               <h6 className="font-semibold">Rating ⭐ </h6>
-              <div className="text-sm">
-                <Rating
-                  initialValue={rating}
-                  size="20px"
-                  /* Available Props */
+              <div className="text-sm flex items-center justify-start gap-x-2">
+                <ReactStars
+                  count={5}
+                  size={24}
+                  activeColor="#ffd700"
+                  value={rating}
                 />
-                <span>{rating}</span>
+                <span className="font-medium">{rating}</span>
               </div>
 
               <div className="flex items-center justify-start gap-3">
